@@ -109,7 +109,7 @@ const BookDemo = () => {
 
         {/* Right Side - Image */}
         <div className="image-container">
-          <img src="/public/assets/img3.png" alt="Healthcare demo" />
+          <img src="/assets/img3.png" alt="Healthcare demo" />
         </div>
       </div>
     </section>

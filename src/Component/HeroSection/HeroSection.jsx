@@ -32,7 +32,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <img src="/public/assets/img1.png" alt="Dashboard Preview" />
+        <img src="/assets/img1.png" alt="Dashboard Preview" />
       </motion.div>
     </section>
   );

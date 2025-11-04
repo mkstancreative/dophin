@@ -37,7 +37,7 @@ const HowItWorks = () => {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="/public/assets/img2.png" // Replace with your image path
+          src="/assets/img2.png" // Replace with your image path
           alt="Dashboard Preview"
           className="how-image"
         />
