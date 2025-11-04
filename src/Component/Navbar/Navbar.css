@@ -1,0 +1,69 @@
+.hero-navbar {
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  background-color: var(--primary-white-color);
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.nav-logo img {
+  height: 40px;
+  border: 1px solid var(--primary-blue-color);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: var(--gradient-gray);
+  color: var(--primary-white-color);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-actions a {
+  padding: 0.3rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  border: 1px solid var(--primary-blue-color);
+  color: var(--primary-blue-color);
+  font-weight: 600;
+}
+
+.demo-btn {
+  color: var(--primary-white-color);
+  font-weight: 600;
+  background: var(--gradient-gray);
+}
+
+.demo-btn:hover {
+  transform: scale(1.05);
+}

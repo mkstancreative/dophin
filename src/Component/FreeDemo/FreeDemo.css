@@ -1,0 +1,106 @@
+.free-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  border-radius: 32px;
+  background: radial-gradient(circle at center, #063c67, #002244);
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.rating-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stars {
+  font-size: 1.3rem;
+}
+
+.rating-text {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.bubbles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.bubble {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.bubble-large {
+  background: white;
+  color: #0c214d;
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #c7d7f5;
+  margin-top: 6px;
+}
+
+.free-title {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 32px 0 24px;
+  color: #fff;
+}
+
+.free-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #4ea8ff;
+}
+
+.btn-outline:hover {
+  background: #4ea8ff33;
+}
+
+.btn-primary {
+  background: #1e88e5;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1565c0;
+}

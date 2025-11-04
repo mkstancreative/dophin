@@ -1,0 +1,146 @@
+.footer {
+  background: radial-gradient(circle at center, #063c67, #002244);
+  color: white;
+  padding: 60px 30px 20px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  flex: 1 1 220px;
+}
+
+.brand-logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.brand-logo .blue {
+  color: #5ab9f0;
+}
+
+.brand-logo .light {
+  color: #cce6ff;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #d0dff7;
+  margin: 12px 0 20px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socials a {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  background: #1e88e5;
+}
+
+.footer-links,
+.footer-contact,
+.footer-newsletter {
+  flex: 1 1 180px;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-newsletter h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #c7d7f5;
+}
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-contact li span {
+  display: inline-block;
+}
+
+.footer-links a {
+  color: #c7d7f5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #5ab9f0;
+}
+
+.footer-newsletter p {
+  font-size: 0.9rem;
+  color: #c7d7f5;
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 280px;
+}
+
+.newsletter-form input {
+  border: none;
+  padding: 10px;
+  flex: 1;
+  outline: none;
+}
+
+.newsletter-form button {
+  background: #1e88e5;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #1565c0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9bb4db;
+  margin-top: 40px;
+}
