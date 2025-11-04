@@ -1,7 +1,7 @@
 .hero-navbar {
   width: 100%;
   max-width: 1200px;
-  z-index: 2;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,11 +9,12 @@
   background-color: var(--primary-white-color);
   padding: 1rem;
   border-radius: 16px;
+  position: sticky;
+  top: 0;
 }
 
 .nav-logo img {
   height: 40px;
-  border: 1px solid var(--primary-blue-color);
 }
 
 .nav-links {
@@ -29,6 +30,7 @@
   transition: color 0.3s ease;
   padding: 10px;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .nav-links a.active,

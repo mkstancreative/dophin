@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./HowItWorks.css";
+import { GoDotFill } from "react-icons/go";
 
 const steps = [
   {
@@ -20,7 +21,7 @@ const steps = [
   },
 ];
 
-const HowItWorks = () => {
+const HowItWorks = ({ id }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -28,8 +29,8 @@ const HowItWorks = () => {
   };
 
   return (
-    <div className="how-container">
-      {/* Left Side: Dashboard Image */}
+    <div className="how-container" id={id}>
+    
       <motion.div
         className="how-image-container"
         initial={{ opacity: 0, x: -50 }}
@@ -37,20 +38,20 @@ const HowItWorks = () => {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="/assets/img2.png" // Replace with your image path
+          src="/assets/img2.png" 
           alt="Dashboard Preview"
           className="how-image"
         />
       </motion.div>
 
-      {/* Right Side: Steps */}
+
       <motion.div
         className="how-content"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <div className="how-badge">How it works</div>
+        <div className="how-badge"> <GoDotFill />How it works</div>
         <h2 className="how-title">
           Streamline Care Delivery in Just <span>Three Steps</span>
         </h2>

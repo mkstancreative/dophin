@@ -12,6 +12,18 @@ function Navbar() {
       <ul className="nav-links">
         <li>
           <Link
+            to="dolpfin"
+            smooth={true}
+            duration={600}
+            offset={-70}
+            activeClass="active"
+            spy={true}
+          >
+            Dolfin AI
+          </Link>
+        </li>
+        <li>
+          <Link
             to="features"
             smooth={true}
             duration={600}

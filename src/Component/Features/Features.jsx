@@ -9,11 +9,15 @@ import {
   FaUsers,
   FaChartBar,
 } from "react-icons/fa";
+import { MdHealthAndSafety } from "react-icons/md";
+import { FaShareFromSquare } from "react-icons/fa6";
+import { RiBaseStationLine } from "react-icons/ri";
+import { GoDotFill } from "react-icons/go";
 
 const features = [
   {
     icon: <FaUserMd />,
-    title: "Patient Management",
+    title: "Patient Management Automation",
     description:
       "Create detailed patient profiles, track vitals, diagnoses, and visit history with ease.",
   },
@@ -31,13 +35,13 @@ const features = [
   },
   {
     icon: <FaClipboardList />,
-    title: "Care planning",
+    title: "Integrated Care Planning",
     description:
       "Build personalized care plans and document every stage of treatment digitally.",
   },
   {
     icon: <FaUsers />,
-    title: "Staff management",
+    title: "Seamless Resource Management",
     description:
       "Add and manage clinicians, track licenses, assign roles, and monitor utilization.",
   },
@@ -46,6 +50,24 @@ const features = [
     title: "Analytics dashboard",
     description:
       "Visualize performance, revenue trends, and patient outcomes with beautiful reports.",
+  },
+  {
+    icon: <MdHealthAndSafety />,
+    title: "Telehealth Integration:",
+    description:
+      "Utilization of telemedicine for consultations and follow-up care.",
+  },
+  {
+    icon: <RiBaseStationLine />,
+    title: "Dolfin AI Integration",
+    description:
+      "Dolfin AI Integration enables providers to deliver better care, reduce administrative burdens, and enhance patient outcomes.",
+  },
+  {
+    icon: <FaShareFromSquare />,
+    title: "Quality Management System (QMS)",
+    description:
+      "Seamless Document Management, Continuous Improvement (CA/PA), Incident Management, Audit Management, and Training.",
   },
 ];
 
@@ -58,7 +80,9 @@ function Features({ id }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="features-badge">• Features</span>
+        <span className="features-badge">
+          <GoDotFill /> Features
+        </span>
         <h2 className="features-title">
           Everything You Need to Run a Smarter <br /> Home Health Agency
         </h2>

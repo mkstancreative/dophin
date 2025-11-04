@@ -15,14 +15,14 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
       >
         <h1>
-          Simplify Home Health Management
+          Simplify & Automate Home Health Operations
           <br />
           <span>with One Powerful Platform</span>
         </h1>
         <p>
           Streamline your operations, manage staff, track visits, and improve
-          patient outcomes all in one easy-to-use, HIPAA-compliant platform
-          built for modern home health agencies.
+          patient outcomes all in one easy-to-use, AI-powered, HIPAA-compliant
+          platform built for modern home health agencies.
         </p>
       </motion.div>
 

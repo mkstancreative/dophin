@@ -107,6 +107,8 @@
   font-size: 0.9rem;
   color: #c7d7f5;
   margin-bottom: 12px;
+  /* border: 1px solid red; */
+  /* max-width: 500px; */
 }
 
 .newsletter-form {

@@ -42,9 +42,9 @@ export default function FreeDemo() {
             animate={{ y: [0, -7, 0] }}
             transition={{ repeat: Infinity, duration: 3.4, ease: "easeInOut" }}
           />
-          <div className="bubble bubble-large">100K+</div>
+          <div className="bubble bubble-large">50+</div>
         </div>
-        <p className="subtext">Over 100K+ healthcare providers choose us</p>
+        <p className="subtext">Over 50 providers are currently transitioning seamlessly to our platform with amazing testimonies</p>
       </motion.div>
 
       <motion.h1

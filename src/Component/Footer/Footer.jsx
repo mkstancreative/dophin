@@ -18,14 +18,10 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-brand">
           <h2 className="brand-logo">
-            <span className="blue">dol</span>
-            <span className="light">fin.</span>
+            <span className="blue">Dolfin Home </span>
+            <span className="light">Health Software.</span>
           </h2>
-          <p className="tagline">
-            Empowering Your Projects,
-            <br />
-            Enhancing Your Success, Every Step of the Way.
-          </p>
+          <p className="tagline">Simple, Intelligent, and Intuitive</p>
 
           <div className="socials">
             <NavLink to="">
@@ -78,14 +74,14 @@ export default function Footer() {
                 {" "}
                 <TiMessages />
               </span>{" "}
-              <span>ask@netpro.internationals</span>
+              <span>ask@netpro.international</span>
             </li>
           </ul>
         </div>
 
         <div className="footer-newsletter">
           <h4>Join Our Newsletter</h4>
-          <p>We’ll send you weekly updates for better tool management.</p>
+          <p>We’ll send you periodic updates to to help empower your healthcare business and operations.</p>
           <div className="newsletter-form">
             <input type="email" placeholder="Enter Email" />
             <button>Subscribe</button>

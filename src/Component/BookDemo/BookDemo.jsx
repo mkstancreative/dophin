@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./BookDemo.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const BookDemo = () => {
+const BookDemo = ({ id }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     business: "",
     phone: "",
     email: "",
-    region: "",
+    url: "",
   });
 
   const handleChange = (e) => {
@@ -16,21 +18,45 @@ const BookDemo = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! We'll reach out soon for your free demo.");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ask@netpro.international", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Your demo request has been sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          business: "",
+          phone: "",
+          email: "",
+          url: "",
+        });
+      } else {
+        toast.error("Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      toast.error("Network error! Please check your connection.");
+    }
   };
 
   return (
-    <section className="book-demo-section">
+    <section className="book-demo-section" id={id}>
       <div className="book-demo-container">
-        {/* Left Side - Form */}
         <div className="form-container">
-          <h2>Book a free demo</h2>
+          <h2>Book a free Demo</h2>
           <p className="subtitle">
-            Let’s show you how Dolfin can streamline your home healthcare operations. 
-            Schedule a personalized demo — no obligations, just insights.
+            Let’s show you how Dolfin can streamline your home healthcare
+            operations. Schedule a personalized demo — no obligations, just
+            insights.
           </p>
 
           <form className="demo-form" onSubmit={handleSubmit}>
@@ -81,18 +107,14 @@ const BookDemo = () => {
                 onChange={handleChange}
                 required
               />
-              <select
-                name="region"
-                value={formData.region}
+              <input
+                type="url"
+                name="url"
+                placeholder="Enter Website"
+                value={formData.url}
                 onChange={handleChange}
                 required
-              >
-                <option value="">Choose region</option>
-                <option value="North America">North America</option>
-                <option value="Europe">Europe</option>
-                <option value="Asia">Asia</option>
-                <option value="Other">Other</option>
-              </select>
+              />
             </div>
 
             <button type="submit" className="submit-btn">
@@ -101,17 +123,19 @@ const BookDemo = () => {
           </form>
 
           <p className="disclaimer">
-            By providing my phone number to Dolfin, I agree and acknowledge that Dolfin may send 
-            text messages to my wireless phone number for any purpose. Message and data rates 
-            may apply. Message frequency will vary, and you will be able to opt-out by replying “STOP”.
+            By providing my phone number to Dolfin, I agree and acknowledge that
+            Dolfin may send text messages to my wireless phone number for any
+            purpose. Message and data rates may apply. Message frequency will
+            vary, and you will be able to opt-out by replying “STOP”.
           </p>
         </div>
 
-        {/* Right Side - Image */}
         <div className="image-container">
           <img src="/assets/img3.png" alt="Healthcare demo" />
         </div>
       </div>
+
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
     </section>
   );
 };
