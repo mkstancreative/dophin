@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import "./HeroSection.css";
 import Navbar from "../Navbar/Navbar";
 
-const HeroSection = () => {
+const HeroSection = ({ home, id}) => {
   return (
     <section className="hero-section">
-      <Navbar />
+      <Navbar home={home} id={id} />
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 40 }}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./HowItWorks.css";
 import { GoDotFill } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const steps = [
   {
@@ -30,7 +31,6 @@ const HowItWorks = ({ id }) => {
 
   return (
     <div className="how-container" id={id}>
-    
       <motion.div
         className="how-image-container"
         initial={{ opacity: 0, x: -50 }}
@@ -38,12 +38,11 @@ const HowItWorks = ({ id }) => {
         transition={{ duration: 0.6 }}
       >
         <img
-          src="/assets/img2.png" 
+          src="/assets/img2.png"
           alt="Dashboard Preview"
           className="how-image"
         />
       </motion.div>
-
 
       <motion.div
         className="how-content"
@@ -51,7 +50,11 @@ const HowItWorks = ({ id }) => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <div className="how-badge"> <GoDotFill />How it works</div>
+        <div className="how-badge">
+          {" "}
+          <GoDotFill />
+          How it works
+        </div>
         <h2 className="how-title">
           Streamline Care Delivery in Just <span>Three Steps</span>
         </h2>
@@ -95,8 +98,16 @@ const HowItWorks = ({ id }) => {
         </div>
 
         <div className="how-buttons">
-          <button className="btn btn-outline">See pricing</button>
-          <button className="btn btn-primary">Get Free Demo</button>
+          <Link className="btn btn-outline">See pricing</Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={600}
+            offset={-70}
+            className="btn btn-primary"
+          >
+            Get Free Demo
+          </Link>
         </div>
       </motion.div>
     </div>

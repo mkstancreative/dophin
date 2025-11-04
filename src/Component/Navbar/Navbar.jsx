@@ -12,18 +12,6 @@ function Navbar() {
       <ul className="nav-links">
         <li>
           <Link
-            to="dolpfin"
-            smooth={true}
-            duration={600}
-            offset={-70}
-            activeClass="active"
-            spy={true}
-          >
-            Dolfin AI
-          </Link>
-        </li>
-        <li>
-          <Link
             to="features"
             smooth={true}
             duration={600}
@@ -32,6 +20,18 @@ function Navbar() {
             spy={true}
           >
             Features
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="dolpfin"
+            smooth={true}
+            duration={600}
+            offset={-70}
+            activeClass="active"
+            spy={true}
+          >
+            Dolfin AI
           </Link>
         </li>
         <li>
@@ -73,7 +73,15 @@ function Navbar() {
       </ul>
       <div className="nav-actions">
         <Link className="login-btn">Login</Link>
-        <Link className="demo-btn">Get Demo</Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={600}
+          offset={-70}
+          className="demo-btn"
+        >
+          Get Demo
+        </Link>
       </div>
     </nav>
   );

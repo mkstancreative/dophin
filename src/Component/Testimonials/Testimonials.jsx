@@ -48,9 +48,7 @@ const Testimonials = ({ id }) => {
         </div>
         <h2 className="title">Real Feedback from Satisfied Customers</h2>
         <p className="subtitle">
-          Discover what real clients have to say about how our services have
-          helped them achieve their goals and manage their finances
-          effortlessly.
+        Discover what clients have to say about products and our services.
         </p>
       </div>
 

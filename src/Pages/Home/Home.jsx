@@ -6,13 +6,15 @@ import BookDemo from "../../Component/BookDemo/BookDemo";
 import FreeDemo from "../../Component/FreeDemo/FreeDemo";
 import Footer from "../../Component/Footer/Footer";
 import HeroSection from "../../Component/HeroSection/HeroSection";
+import DolfinAIHome from "../../Component/DolfinFeatures/DolfinFeatures";
 
 function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection home="/" id="contact" />
       <Features id="features" />
       <HowItWorks id="howitworks" />
+      <DolfinAIHome id="dolfin" />
       <Testimonials id="testimonials" />
       <BookDemo id="contact" />
       <FreeDemo />
