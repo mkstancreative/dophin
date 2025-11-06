@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className="hero-navbar">
-      <Link to="/" className="nav-logo">
-        <img src="/assets/logo.png" alt="Dolfin Logo" />
-      </Link>
+      <div className="nav-header">
+        <Link to="/" className="nav-logo" onClick={closeMenu}>
+          <img src="/assets/logo.png" alt="Dolfin Logo" />
+        </Link>
 
-      <ul className="nav-links">
+        {/* Hamburger Icon */}
+        <div className="hamburger" onClick={toggleMenu}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
+      </div>
+
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
           <Link
             to="features"
@@ -18,6 +31,7 @@ function Navbar() {
             offset={-70}
             activeClass="active"
             spy={true}
+            onClick={closeMenu}
           >
             Features
           </Link>
@@ -30,8 +44,9 @@ function Navbar() {
             offset={-70}
             activeClass="active"
             spy={true}
+            onClick={closeMenu}
           >
-            Dolfin AI
+            Dolfin AI
           </Link>
         </li>
         <li>
@@ -42,6 +57,7 @@ function Navbar() {
             offset={-70}
             activeClass="active"
             spy={true}
+            onClick={closeMenu}
           >
             How It Works
           </Link>
@@ -54,6 +70,7 @@ function Navbar() {
             offset={-70}
             activeClass="active"
             spy={true}
+            onClick={closeMenu}
           >
             Testimonials
           </Link>
@@ -66,11 +83,29 @@ function Navbar() {
             offset={-70}
             activeClass="active"
             spy={true}
+            onClick={closeMenu}
           >
             Contact Us
           </Link>
         </li>
+
+        <div className="mobile-actions">
+          <Link className="login-btn" onClick={closeMenu}>
+            Login
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={600}
+            offset={-70}
+            className="demo-btn"
+            onClick={closeMenu}
+          >
+            Get Demo
+          </Link>
+        </div>
       </ul>
+
       <div className="nav-actions">
         <Link className="login-btn">Login</Link>
         <Link

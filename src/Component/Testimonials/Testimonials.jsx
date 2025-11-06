@@ -5,32 +5,32 @@ import { GoDotFill } from "react-icons/go";
 
 const testimonials = [
   {
-    name: "Grace O",
+    name: "James Mitchell",
     role: "Healing Hands Homecare",
     text: "Dolfin revolutionized our operations. Scheduling, tracking, and billing are now seamless we’ve cut admin time by over 50%.",
   },
   {
-    name: "Dr. Kelvin A.",
+    name: "Sarah Collins",
     role: "Clinical Lead, HopeLine Healthcare",
     text: "With Dolfin, our caregivers spend more time with patients and less time on paperwork.!",
   },
   {
-    name: "Mary N.",
+    name: "Michael Reed",
     role: "Compliance Officer, PrimeCare Home Health",
     text: "Compliance used to be stressful. With Dolfin, records are organized and audits are easy.",
   },
   {
-    name: "Samson U.",
+    name: "Jessica Turner",
     role: "Managing Director, Lifeline HomeCare Services",
     text: "Dolfin’s analytics give us clear insights to improve performance and make smarter decisions.",
   },
   {
-    name: "Ngozi I.",
+    name: "David Brooks.",
     role: "Administrator, Comfort Care Agency",
     text: "The Dolfin transition was smooth, great onboarding and support. It feels like a true partnership.",
   },
   {
-    name: "Tunde O.",
+    name: "Amanda Hayes.",
     role: "Finance Manager, Gentle Touch Healthcare",
     text: "Billing errors are gone. Dolfin’s automation speeds up payments and keeps clients happy.",
   },

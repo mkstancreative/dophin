@@ -14,7 +14,7 @@ function Home() {
       <HeroSection home="/" id="contact" />
       <Features id="features" />
       <HowItWorks id="howitworks" />
-      <DolfinAIHome id="dolfin" />
+      <DolfinAIHome id="dolpfin" />
       <Testimonials id="testimonials" />
       <BookDemo id="contact" />
       <FreeDemo />

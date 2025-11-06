@@ -1,10 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./DolfinFeatures.css";
+import { FaPlugCircleBolt } from "react-icons/fa6";
+import { IoMdSettings } from "react-icons/io";
+import { MdOutlineMessage } from "react-icons/md";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { LuBadgeDollarSign } from "react-icons/lu";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { MdOutlineKey } from "react-icons/md";
+import { FaWheelchair } from "react-icons/fa";
 
 const features = {
   "1. Clinical Decision Support": {
-    icon: "🩺",
+    icon: <FaPlugCircleBolt />,
     summary: "Analyze patient data for faster, better care decisions.",
     useCases: [
       "Early risk detection: Predict hospital readmissions, falls, infections, or pressure ulcers.",
@@ -14,7 +22,7 @@ const features = {
     ],
   },
   "2. Operational & Workflow Automation": {
-    icon: "⚙️",
+    icon: <IoMdSettings />,
     summary:
       "Automate heavy documentation, scheduling, and compliance demands.",
     useCases: [
@@ -25,7 +33,7 @@ const features = {
     ],
   },
   "3. Natural Language Processing (NLP)": {
-    icon: "💬",
+    icon: <MdOutlineMessage />,
     summary:
       "Process free-text notes and messages to uncover insights and automate reporting.",
     useCases: [
@@ -36,7 +44,7 @@ const features = {
     ],
   },
   "4. Patient Engagement & Remote Monitoring": {
-    icon: "📈",
+    icon: <FaArrowTrendUp />,
     summary:
       "Enable more personalized, continuous care beyond in-person visits.",
     useCases: [
@@ -47,7 +55,7 @@ const features = {
     ],
   },
   "5. Billing, Reimbursement & Revenue Cycle": {
-    icon: "💰",
+    icon: <LuBadgeDollarSign />,
     summary:
       "Streamline back-office operations to reduce claim denials and accelerate payments.",
     useCases: [
@@ -58,7 +66,7 @@ const features = {
     ],
   },
   "6. Workforce Management & Training": {
-    icon: "👩‍⚕️",
+    icon: <FaPeopleGroup />,
     summary:
       "Support staff efficiency, satisfaction, and retention critical issues in home health.",
     useCases: [
@@ -69,7 +77,7 @@ const features = {
     ],
   },
   "7. Quality & Compliance Monitoring": {
-    icon: "🔒",
+    icon: <MdOutlineKey />,
     summary: "Ensure care quality, safety, and adherence to regulations.",
     useCases: [
       "OASIS QA/QI automation: AI reviews assessments for accuracy and completeness.",
@@ -79,7 +87,7 @@ const features = {
     ],
   },
   "8. Integration & Interoperability": {
-    icon: "🔗",
+    icon: <FaWheelchair />,
     summary:
       "Assist in managing and interpreting data from multiple systems (EHR, RPM, etc.).",
     useCases: [
@@ -94,7 +102,7 @@ const DolfinAIHome = ({ id }) => {
   const [selectedFeature, setSelectedFeature] = useState(null);
   const panelRef = useRef(null);
 
-  // 🔹 Close panel when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (panelRef.current && !panelRef.current.contains(e.target)) {

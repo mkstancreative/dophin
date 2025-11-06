@@ -146,3 +146,8 @@
   color: #9bb4db;
   margin-top: 40px;
 }
+@media screen and (max-width: 992px) {
+  .footer {
+    border-radius: unset;
+  }
+}

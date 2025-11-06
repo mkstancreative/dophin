@@ -109,8 +109,24 @@
     order: -1;
     height: 250px;
   }
-
   .form-container {
-    padding: 2rem 1.5rem;
+    padding: unset;
+  }
+
+  .form-container > h2 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .demo-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form-row {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .form-row input {
+    width: unset;
   }
 }

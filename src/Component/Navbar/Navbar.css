@@ -13,6 +13,13 @@
   top: 0;
 }
 
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .nav-logo img {
   height: 40px;
 }
@@ -68,4 +75,70 @@
 
 .demo-btn:hover {
   transform: scale(1.05);
+}
+
+.mobile-actions {
+  display: none;
+}
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #000;
+  z-index: 110;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .nav-actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    height: 50vh;
+    transition: top 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  .nav-links > li {
+    width: 100%;
+  }
+  .nav-links > li a:hover {
+    width: 60%;
+    /* border: 10px solid slateblue; */
+    display: inline-block;
+  }
+
+  .nav-links.open {
+    top: 0;
+  }
+
+  .mobile-actions {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .mobile-actions .login-btn,
+  .mobile-actions .demo-btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 0.5rem;
+  }
 }
