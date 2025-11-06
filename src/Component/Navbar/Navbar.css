@@ -13,13 +13,6 @@
   top: 0;
 }
 
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .nav-logo img {
   height: 40px;
 }
@@ -91,6 +84,13 @@
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   .nav-actions {
     display: none;
   }
